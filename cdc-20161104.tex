@@ -192,44 +192,6 @@ National Institutes of Health\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{slide}
 \begin{center}
-\textbf{Outline of talk}
-
-\small
-\begin{description}
-\item[1.] Selection of four pilot viral species
-\item[2.] Overview of annotation pipeline and explanation of ``error codes''
-\item[3.] Statistics on pilot phase annotations
-\item[4.] Implementation of annotation pipeline
-\item[5.] Interaction with J. Rodney Brister's Virus Variation group
-\item[6.] Future directions
-\end{description}
-
-\end{center}
-\vfill
-\end{slide}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Outline of talk}
-
-\small
-\begin{description}
-\item[\textcolor{myorange}1.] \textcolor{myorange}{Selection of four pilot viral species}
-\item[2.] Overview of annotation pipeline and explanation of ``error codes''
-\item[3.] Statistics on pilot phase annotations
-\item[4.] Implementation of annotation pipeline
-\item[5.] Interaction with J. Rodney Brister's Virus Variation group
-\item[6.] Future directions
-\end{description}
-
-\end{center}
-\vfill
-\end{slide}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
 
 \textbf{Four pilot species were chosen from the 15 most prevalent}
 
@@ -275,6 +237,228 @@ National Institutes of Health\\
 \flushright{$*$ sum of 11 segments}
 \vfill
 \end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[width=10in]{figs/annotation-schematic-hbv-1}
+\end{center}
+\vfill
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[width=10in]{figs/annotation-schematic-hbv-2}
+\end{center}
+\vfill
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[width=10in]{figs/annotation-schematic-hbv-3}
+\end{center}
+\vfill
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[width=10in]{figs/annotation-schematic-hbv-4}
+\end{center}
+\vfill
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[width=10in]{figs/annotation-schematic-dengue-1}
+\end{center}
+\vfill
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[width=10in]{figs/annotation-schematic-dengue-2}
+\end{center}
+\vfill
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[width=10in]{figs/annotation-schematic-dengue-3}
+\end{center}
+\vfill
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[width=10in]{figs/annotation-schematic-dengue-4-with-output}
+\end{center}
+\vfill
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\textbf{Error codes: 17 abnormal situations}
+
+\small
+\begin{itemize}
+\item Per-feature (e.g. CDS, mature peptide) errors:
+\begin{itemize}
+\item Unexpected stop codon errors (trc, ext, nst, ntr)
+\item Missing expected features (str, stp, nm3)
+\item Problem with homology search prediction (bd5, bd3, nop)
+\item Unexpected relationship to other features (olp, aja, ajb)
+\item Problem annotating CDS due to mature peptide errors (aji, int, inp)
+\end{itemize}
+\item Per-sequence errors:
+\begin{itemize} 
+\item Lack of exactly one origin sequence (ori)
+\end{itemize}
+\end{itemize}
+
+\end{center}
+\vfill
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[height=8in]{figs/pilot-errcode-table-1}
+\vfill
+\end{center}
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[height=8in]{figs/pilot-errcode-table-2}
+\vfill
+\end{center}
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[height=8in]{figs/pilot-errcode-table-3}
+\vfill
+\end{center}
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[height=8in]{figs/pilot-errcode-table-4}
+\vfill
+\end{center}
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\textbf{Next strep: Annotate ``All'' Flaviviruses}
+
+LIST/TABLE OF FLAVIVIRUSES FOR WHICH WE HAVE ANNOTATIONS
+
+columns: name, number of sequences, number of MPs, CDS, errors
+
+\vfill
+\end{center}
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\textbf{Automatic Classification of Flaviviruses}
+
+\begin{itemize}
+\item Given a viral sequence:
+\begin{itemize}
+  \item Is it a flavivirus? 
+  \item If yes: what species it is (closest RefSeq)? 
+  \item Annotate based on closest RefSeq.
+\end{itemize}
+\end{itemize}
+
+\begin{itemize} 
+\item Trial implementation (Lara Shonkwiler): 
+\begin{itemize}
+  \item Correctly classifies 1100 out of 1102 flaviviruses
+%  \item Correctly classifies 1100 out of 1102 flaviviruses
+\end{itemize}
+\end{itemize}
+
+
+
+\vfill
+\end{center}
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\textbf{Future directions}
+
+\begin{itemize}
+\item  Protein homology searches to supplement or replace nucleotide searches
+\item  Multiple alignment based homology searches 
+\item  Given any viral sequence, find its nearest RefSeq
+\item  Annotate structural RNA features (Infernal)
+\end{itemize}
+
+\vfill
+\end{center}
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+
+\large
+\begin{center}
+\large{\textbf{Acknowledgements}} \\
+
+\vspace{0.5in}
+
+Lara Shonkwiler \\
+
+\vspace{0.5in}
+
+Alejandro Sch\"{a}ffer \\
+David Landsman \\
+David Lipman
+
+\vspace{0.5in}
+
+J. Rodney Brister \\
+Eneida Hatcher \\
+Olga Blinkova \\
+Sergey Zhdanov \\ 
+Yiming Bao \\
+
+\end{center}
+
+\vfill
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\textbf{trc error code reports a truncation due to an early stop codon}
+\vspace{0.5in}
+
+\includegraphics[width=10in]{figs/errornew-1-trc}
+\end{center}
+\vfill
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\textbf{ext: extended feature due to a missing stop codon}
+\vspace{0.5in}
+
+\includegraphics[width=10in]{figs/errornew-2-ext}
+\end{center}
+\vfill
+\end{slide}
+\begin{slide}
+\begin{center}
+\textbf{Annotation statistics for pilot species \\ and comparison to
+  GenBank annotations}
+
+\includegraphics[height=7in]{figs/pilot-genbank-viv-comparison-table}
+\vfill
+\end{center}
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{slide}
 \begin{center}
@@ -392,125 +576,6 @@ pathogenesis. INTECH Open Access Publisher, 2013.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{slide}
 \begin{center}
-\textbf{Outline of talk}
-
-\small
-\begin{description}
-\item[1.] Selection of four pilot viral species
-\item[\textcolor{myorange}2.] \textcolor{myorange}{Overview of annotation pipeline and explanation of ``error codes''}
-\item[3.] Statistics on pilot phase annotations
-\item[4.] Implementation of annotation pipeline
-\item[5.] Interaction with J. Rodney Brister's Virus Variation group
-\item[6.] Future directions
-\end{description}
-
-\end{center}
-\vfill
-\end{slide}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[width=10in]{figs/annotation-schematic-msv-1}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[width=10in]{figs/annotation-schematic-msv-2}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[width=10in]{figs/annotation-schematic-msv-3}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[width=10in]{figs/annotation-schematic-msv-4}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[width=10in]{figs/annotation-schematic-dengue-1}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[width=10in]{figs/annotation-schematic-dengue-2}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[width=10in]{figs/annotation-schematic-dengue-3}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[width=10in]{figs/annotation-schematic-dengue-4-with-output}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Error codes: 17 abnormal situations}
-
-\small
-\begin{itemize}
-\item Per-feature (e.g. CDS, mature peptide) errors:
-\begin{itemize}
-\item Unexpected stop codon errors (trc, ext, nst, ntr)
-\item Missing expected features (str, stp, nm3)
-\item Problem with homology search prediction (bd5, bd3, nop)
-\item Unexpected relationship to other features (olp, aja, ajb)
-\item Problem annotating CDS due to mature peptide errors (aji, int, inp)
-\end{itemize}
-\item Per-sequence errors:
-\begin{itemize} 
-\item Lack of exactly one origin sequence (ori)
-\end{itemize}
-\end{itemize}
-
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{trc error code reports a truncation due to an early stop codon}
-\vspace{0.5in}
-
-\includegraphics[width=10in]{figs/errornew-1-trc}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{ext: extended feature due to a missing stop codon}
-\vspace{0.5in}
-
-\includegraphics[width=10in]{figs/errornew-2-ext}
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
 \textbf{olp: lack of an expected overlap with another feature}
 \vspace{0.5in}
 
@@ -526,275 +591,6 @@ pathogenesis. INTECH Open Access Publisher, 2013.}
 
 \includegraphics[width=10in]{figs/errornew-4-ajb}
 \end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Outline of talk}
-
-\small
-\begin{description}
-\item[1.] Selection of four pilot viral species
-\item[2.] Overview of annotation pipeline and explanation of ``error codes''
-\item[\textcolor{myorange}3.] \textcolor{myorange}{Statistics on pilot phase annotations}
-\item[4.] Implementation of annotation pipeline
-\item[5.] Interaction with J. Rodney Brister's Virus Variation group
-\item[6.] Future directions
-\end{description}
-
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Annotation statistics for pilot species \\ and comparison to
-  GenBank annotations}
-
-\includegraphics[height=7in]{figs/pilot-genbank-viv-comparison-table}
-\vfill
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[height=8in]{figs/pilot-errcode-table-1}
-\vfill
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[height=8in]{figs/pilot-errcode-table-2}
-\vfill
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[height=8in]{figs/pilot-errcode-table-3}
-\vfill
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[height=8in]{figs/pilot-errcode-table-4}
-\vfill
-\end{center}
-\end{slide}
-\begin{slide}
-\begin{center}
-\textbf{Outline of talk}
-
-\small
-\begin{description}
-\item[1.] Selection of four pilot viral species
-\item[2.] Overview of annotation pipeline and explanation of ``error codes''
-\item[3.] Statistics on pilot phase annotations
-\item[\textcolor{myorange}4.] \textcolor{myorange}{Implementation of annotation pipeline}
-\item[4.] Interaction with J. Rodney Brister's Virus Variation group
-\item[6.] Future directions
-\end{description}
-
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[width=10.5in]{figs/dnaorg-scripts-build1}
-\vfill
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[width=10.5in]{figs/dnaorg-scripts-build2}
-\vfill
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[width=10.5in]{figs/dnaorg-scripts-annotate1}
-\vfill
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[width=10.5in]{figs/dnaorg-scripts-annotate2}
-\vfill
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[width=10.5in]{figs/dnaorg-scripts-annotate3}
-\vfill
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[width=10.5in]{figs/dnaorg-scripts-annotate4}
-\vfill
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Annotating Maize Streak Virus: dnaorg\_build.pl step} 
-
-\includegraphics[width=10.5in]{figs/dnaorg-build-output}
-
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Annotating Maize Streak Virus: dnaorg\_annotate.pl step} 
-
-\includegraphics[width=10.5in]{figs/dnaorg-annotate-output1}
-
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Annotating Maize Streak Virus: dnaorg\_annotate.pl step} 
-
-\includegraphics[width=10.5in]{figs/dnaorg-annotate-output2}
-
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Infernal was chosen for homology search tool over HMMER 
-  \\ because it encourages global alignment}
-
-\begin{itemize}
-\item HMMER3 alignments are local and often trim ends due to its
-  probabilistic model
-
-\center{\includegraphics[width=6in]{figs/hmmer-local-alignment}}\footnote{Eddy,
-  PLoS Comput Biol 4.5 (2008): e1000069.}
-
-\item Infernal encourages full length alignment by setting probability of
-  global alignment to 0.5 (not shown). 
-\end{itemize}
-
-\vfill
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Outline of talk}
-
-\small
-\begin{description}
-\item[1.] Selection of four pilot viral species
-\item[2.] Overview of annotation pipeline and explanation of ``error codes''
-\item[3.] Statistics on pilot phase annotations
-\item[4.] Implementation of annotation pipeline
-\item[\textcolor{myorange}5.] \textcolor{myorange}{Interaction with J. Rodney Brister's Virus Variation group}
-\item[6.] Future directions
-\end{description}
-
-\end{center}
-\vfill
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[height=8in]{figs/eneida-slide-1}
-\vfill
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[height=8in]{figs/eneida-slide-2}
-\vfill
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[height=8in]{figs/eneida-slide-3}
-\vfill
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\includegraphics[height=8in]{figs/eneida-slide-4}
-\vfill
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-\begin{center}
-\textbf{Future directions}
-
-\small
-\begin{itemize}
-\item Annotate more species (Norovirus, Zika, and Ebola are currently \\ being checked).
-
-\item Long term:
-\begin{itemize}
-\item  Protein homology searches to supplement or replace nucleotide searches
-\item  Given any viral sequence, find its nearest RefSeq
-\item  Annotate structural RNA features (Infernal is well-suited for this)
-\item  More robust solution to the problem of finding origin sequences
-\item  Multiple alignment based homology searches 
-\end{itemize}
-
-\item Short term: we have a 36 item TODO list that we agreed to with
-  J. Rodney \\ Brister's group on April 12, which includes:
-\begin{itemize}
-  \item Completed items (including analysis of West Nile annotations)
-  \item Loading and using our pipeline's annotations in the Virus Variation
-    database for Dengue and West Nile
-  \item Reviewing Ebola and Norovirus annotations
-  \item Comparing our Ebola annotations to existing annotations
-\end{itemize}
-\end{itemize}
-
-\vfill
-\end{center}
-\end{slide}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{slide}
-
-\large
-\begin{center}
-\large{\textbf{Acknowledgements}} \\
-
-\vspace{0.5in}
-
-Alejandro Sch\"{a}ffer \\
-David Landsman \\
-David Lipman
-
-\vspace{0.5in}
-
-J. Rodney Brister \\
-Eneida Hatcher \\
-Olga Blinkova \\
-Sergey Zhdanov \\ 
-Yiming Bao \\
-
-\end{center}
-
 \vfill
 \end{slide}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -890,4 +686,127 @@ Yiming Bao \\
 \end{slide}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{slide}
+\begin{center}
+\includegraphics[width=10.5in]{figs/dnaorg-scripts-build1}
+\vfill
+\end{center}
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[width=10.5in]{figs/dnaorg-scripts-build2}
+\vfill
+\end{center}
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[width=10.5in]{figs/dnaorg-scripts-annotate1}
+\vfill
+\end{center}
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[width=10.5in]{figs/dnaorg-scripts-annotate2}
+\vfill
+\end{center}
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[width=10.5in]{figs/dnaorg-scripts-annotate3}
+\vfill
+\end{center}
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[width=10.5in]{figs/dnaorg-scripts-annotate4}
+\vfill
+\end{center}
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\textbf{Annotating Maize Streak Virus: dnaorg\_build.pl step} 
+
+\includegraphics[width=10.5in]{figs/dnaorg-build-output}
+
+\end{center}
+\vfill
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\textbf{Annotating Maize Streak Virus: dnaorg\_annotate.pl step} 
+
+\includegraphics[width=10.5in]{figs/dnaorg-annotate-output1}
+
+\end{center}
+\vfill
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\textbf{Annotating Maize Streak Virus: dnaorg\_annotate.pl step} 
+
+\includegraphics[width=10.5in]{figs/dnaorg-annotate-output2}
+
+\end{center}
+\vfill
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\textbf{Infernal was chosen for homology search tool over HMMER 
+  \\ because it encourages global alignment}
+
+\begin{itemize}
+\item HMMER3 alignments are local and often trim ends due to its
+  probabilistic model
+
+\center{\includegraphics[width=6in]{figs/hmmer-local-alignment}}\footnote{Eddy,
+  PLoS Comput Biol 4.5 (2008): e1000069.}
+
+\item Infernal encourages full length alignment by setting probability of
+  global alignment to 0.5 (not shown). 
+\end{itemize}
+
+\vfill
+\end{center}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[height=8in]{figs/eneida-slide-1}
+\vfill
+\end{center}
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[height=8in]{figs/eneida-slide-2}
+\vfill
+\end{center}
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[height=8in]{figs/eneida-slide-3}
+\vfill
+\end{center}
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{slide}
+\begin{center}
+\includegraphics[height=8in]{figs/eneida-slide-4}
+\vfill
+\end{center}
+\end{slide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
+
