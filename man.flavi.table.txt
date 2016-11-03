@@ -1,0 +1,66 @@
+                                                              average
+                                                             number of    average 
+RefSeq                                     num  num   num   annotations   number of 
+accession   name                          seqs  MPs   CDS  MP       CDS   errors
+---------   ----------------------------  ----  ----  ---  ------  -----  ------
+NC_001477   Dengue virus serology 1       1594    14    1  13.998  0.993   0.104    
+NC_001474   Dengue virus serology 2       1171    14    1  13.998  0.995   0.059
+NC_001475   Dengue virus serology 3        856    14    1  13.999  0.998   0.033
+NC_002640   Dengue virus serology 4        151    14    1  14.000  0.974   0.404
+
+NC_009942   West Nile virus lineage 1     1027    16    3  16.000  2.995   0.124
+NC_001563   West Nile virus lineage 2       71    15    2  14.944  1.972   1.014
+
+NC_001564   Cell fusing agent virus          3    15    2  15.000  1.333   7.667
+NC_002657   Classical swine fever virus     95    13    2  12.979  1.653   3.653
+NC_004102   Hepatitis C virus genotype 1   778    11    2  10.970  1.325   8.104
+NC_005064   Kamiti River virus               3    15    2  15.000  2.000   0.000
+NC_008604   Culex flavivirus                26    15    2  15.000  2.000   0.231
+NC_012671   Quang Binh virus                 3    15    2  15.000  2.000   1.667
+NC_012932   Aedes flavivirus                 4    14    2  14.000  2.000   0.000
+NC_017086   Chaoyang virus                   4    15    2  15.000  2.000   0.000
+NC_020902   Equine pegivirus                 2    10    1  10.000  1.000   0.000
+NC_021154   Rodent pegivirus                 2    11    1  11.000  1.000   0.000
+NC_024299   Nienokoue virus                  2    15    2  15.000  2.000   0.000
+NC_024805   Ilomantsi virus                  2    15    2  15.000  2.000   0.000
+NC_026797   Bovine hepacivirus              11    10    1  10.000  1.000   0.000
+NC_027817   Parramatta River virus           2    15    2  15.000  2.000   0.000
+NC_027819   Mercadeo virus                   3    15    2  15.000  2.000   0.000
+NC_029055   Spondweni virus                  2    14    1  14.000  1.000   0.000
+NC_030400   Nakiwogo virus                   2    15    2  15.000  2.000   0.000
+NC_030401   Hanko virus                      2    15    2  15.000  2.000   0.000
+
+
+                                                             avg number    
+                                                              of failed    
+                                                             annotations   average
+RefSeq                                     num  num   num  -------------   number of
+accession   name                          seqs  MPs   CDS      MP    CDS   errors
+---------   ----------------------------  ----  ----  ---  ------  -----  ------
+NC_001477   Dengue virus serology 1       1594    14    1   0.002  0.007   0.104    
+NC_001474   Dengue virus serology 2       1171    14    1   0.002  0.005   0.059
+NC_001475   Dengue virus serology 3        856    14    1   0.001  0.002   0.033
+NC_002640   Dengue virus serology 4        151    14    1       0  0.026   0.404
+
+NC_009942   West Nile virus lineage 1     1027    16    3       0  0.005   0.124
+NC_001563   West Nile virus lineage 2       71    15    2   0.056  0.028   1.014
+
+NC_001564   Cell fusing agent virus          3    15    2       0  0.667   7.667
+NC_002657   Classical swine fever virus     95    13    2   0.021  0.347   3.653
+NC_004102   Hepatitis C virus genotype 1   778    11    2   0.030  0.675   8.104
+NC_005064   Kamiti River virus               3    15    2       0      0       0
+NC_008604   Culex flavivirus                26    15    2       0      0   0.231
+NC_012671   Quang Binh virus                 3    15    2       0      0   1.667
+NC_012932   Aedes flavivirus                 4    14    2       0      0       0
+NC_017086   Chaoyang virus                   4    15    2       0      0       0
+NC_020902   Equine pegivirus                 2    10    1       0      0       0
+NC_021154   Rodent pegivirus                 2    11    1       0      0       0
+NC_024299   Nienokoue virus                  2    15    2       0      0       0
+NC_024805   Ilomantsi virus                  2    15    2       0      0       0
+NC_026797   Bovine hepacivirus              11    10    1       0      0       0
+NC_027817   Parramatta River virus           2    15    2       0      0       0
+NC_027819   Mercadeo virus                   3    15    2       0      0       0
+NC_029055   Spondweni virus                  2    14    1       0      0       0
+NC_030400   Nakiwogo virus                   2    15    2       0      0       0
+NC_030401   Hanko virus                      2    15    2       0      0       0
+
